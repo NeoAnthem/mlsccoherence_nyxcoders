@@ -14,7 +14,7 @@ const popup = document.getElementById("logout-popup");
 function logout() {
   // Simulate logout process (e.g., clear session data, redirect to login page)
 console.log("Logging out...");
-  window.location.href = "Home/index.html"; // Redirect to login page after logout
+  window.location.href = "home.html"; // Redirect to login page after logout
 }
 
 // Check if a logout button element exists
