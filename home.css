@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     /* border: 1px solid white; */
-    color: white;
+    color: black;
     font-family: "Poppins", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -10,15 +10,17 @@
 
 body{
     height: 100vh;
-    background: rgb(32, 8, 71);
-    background: radial-gradient(circle, rgb(37, 3, 59) 0%, rgba(148,187,233,1) 100%);
+    background: rgb(220, 229, 253);
 }
 
 header{
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
-    background: rgb(58, 6, 62);
-    background: radial-gradient(circle, rgb(37, 3, 59) 0%, rgba(148,187,233,1) 100%);
+    background: #982AE2;
+    border-radius: 20px;
+    border-style: groove;
 }
 
 .left, .right{
@@ -28,12 +30,12 @@ header{
     }
 }
 
-.logo p{
-    font-size: larger; 
+.logo img{
     border: 2px solid black;
     border-radius: 100%;
     padding: 10px;
     background-color: black;
+    width: 100px;
     aspect-ratio: 1;
 }
 
@@ -43,7 +45,19 @@ header{
 }
 
 .title p{
-    font-size: larger;
+    font-size: xx-large;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+}
+
+.home a{
+    text-decoration: none;
+    background-color:aliceblue;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 section{
