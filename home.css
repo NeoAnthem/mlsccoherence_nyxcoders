@@ -24,6 +24,7 @@ header{
     background: #982AE2;
     border-radius: 20px;
     border: 10px groove violet;
+    width: 99%;
 }
 
 .left, .right{
