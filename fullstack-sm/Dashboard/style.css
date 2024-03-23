@@ -39,6 +39,76 @@ justify-content: space-between;
 align-items: center; 
 } 
 
+.dot {
+    padding: 0.8rem;
+    border-radius: 50%;
+    background-color: hsl(267, 73%, 16%);
+    position: absolute;
+    top: 0.2rem;
+    left: 0.1rem;
+    transition: all 0.3s;
+    /* transform: translate(-40%); */
+}
+
+/* Styles for the logout popup */
+#logout-popup {
+	position: fixed; /* Keep the popup on top of other content */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* Center the popup */
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	display: none; /* Initially hidden */
+	z-index: 100; /* Set a higher z-index to ensure the popup is on top */
+}
+
+#logout-popup h2 {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+#logout-popup button {
+	margin: 5px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#logout-popup button:hover {
+	background-color: #eee;
+}
+
+#logout-button {
+	background-color: #f00; /* Red color for logout button */
+	color: #fff;
+}
+
+  #popup-close { /* Optional styles for close button */
+	background-color: #ddd;
+}
+
+
+.btn {
+    width: 6rem;
+    height: 2rem;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-image: linear-gradient(to right, hsl(257, 45%, 52%), hsl(202, 65%, 75%));
+    position: relative;
+    cursor: pointer;
+}
+
+.dashboard__header-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .logo { 
 font-size: 27px; 
 font-weight: 600; 
