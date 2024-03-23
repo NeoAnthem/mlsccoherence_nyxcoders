@@ -39,6 +39,34 @@ justify-content: space-between;
 align-items: center; 
 } 
 
+.dot {
+    padding: 0.8rem;
+    border-radius: 50%;
+    background-color: hsl(267, 73%, 16%);
+    position: absolute;
+    top: 0.2rem;
+    left: 0.1rem;
+    transition: all 0.3s;
+    /* transform: translate(-40%); */
+}
+
+.btn {
+    width: 6rem;
+    height: 2rem;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    border: none;
+    background-image: linear-gradient(to right, hsl(257, 45%, 52%), hsl(202, 65%, 75%));
+    position: relative;
+    cursor: pointer;
+}
+
+.dashboard__header-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .logo { 
 font-size: 27px; 
 font-weight: 600; 
