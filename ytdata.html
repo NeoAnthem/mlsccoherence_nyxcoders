@@ -1,0 +1,23 @@
+<html>
+  <head></head>
+  <body>
+    Channel ID
+    <input type="text" id = "channelID"> <br>
+    Video ID
+    <input type="text" id = "videoID"> <br>
+    <button type = "button" onclick = "channel(); video();">Show Statistics</button>
+
+    <p>
+      Statistics : <br>
+      - Channel Name : <span id = "channelName"></span> <br>
+      - Channel Subscribers : <span id = "channelSubscribers"></span> <br>
+      - Channel Videos : <span id = "channelVideos"></span> <br>
+      - Channel Views : <span id = "channelViews"></span> <br>
+      - Video Views : <span id = "videoViews"></span> <br>
+      - Video Likes : <span id = "videoLikes"></span> <br>
+      - Video Comments : <span id = "videoComments"></span> <br>
+    </p>
+
+    <script src="yt-data-api.js"></script>
+  </body>
+</html>
