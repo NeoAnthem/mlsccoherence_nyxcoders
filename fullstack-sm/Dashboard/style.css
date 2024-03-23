@@ -50,6 +50,48 @@ align-items: center;
     /* transform: translate(-40%); */
 }
 
+/* Styles for the logout popup */
+#logout-popup {
+	position: fixed; /* Keep the popup on top of other content */
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* Center the popup */
+	background-color: #fff;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	display: none; /* Initially hidden */
+	z-index: 100; /* Set a higher z-index to ensure the popup is on top */
+}
+
+#logout-popup h2 {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+#logout-popup button {
+	margin: 5px;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#logout-popup button:hover {
+	background-color: #eee;
+}
+
+#logout-button {
+	background-color: #f00; /* Red color for logout button */
+	color: #fff;
+}
+
+  #popup-close { /* Optional styles for close button */
+	background-color: #ddd;
+}
+
+
 .btn {
     width: 6rem;
     height: 2rem;
