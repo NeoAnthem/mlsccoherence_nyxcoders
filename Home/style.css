@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     /* border: 1px solid white; */
-    color: ;
+    color: white;
     font-family: "Poppins", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -10,15 +10,15 @@
 
 body{
     height: 100vh;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgb(199, 70, 126) 0%, rgba(148,187,233,1) 100%);
+    background: rgb(32, 8, 71);
+    background: radial-gradient(circle, rgb(37, 3, 59) 0%, rgba(148,187,233,1) 100%);
 }
 
 header{
     display: flex;
     justify-content: space-between;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: rgb(58, 6, 62);
+    background: radial-gradient(circle, rgb(37, 3, 59) 0%, rgba(148,187,233,1) 100%);
 }
 
 .left, .right{
@@ -46,8 +46,17 @@ header{
     font-size: larger;
 }
 
-.right{
+section{
+    font-size: xx-large;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.reg, .login{
+    background-color: blueviolet;
+    padding: 10px;
+    border-radius: 10px;
+    font-size:large;
+    margin: 1%;
 }
