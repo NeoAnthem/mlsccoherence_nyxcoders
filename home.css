@@ -47,10 +47,12 @@ header{
 }
 
 section{
+    height: 60%;
     font-size: xx-large;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30%;
 }
 
 .reg, .login{
@@ -59,4 +61,10 @@ section{
     border-radius: 10px;
     font-size:large;
     margin: 1%;
+}
+
+#about p{
+    margin-left: 25%;
+    width: 50%;
+    font-size: larger;
 }
