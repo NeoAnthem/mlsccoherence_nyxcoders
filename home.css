@@ -9,8 +9,11 @@
 }
 
 body{
-    height: 100vh;
     background: rgb(220, 229, 253);
+}
+
+.contain{
+    height: 100vh;
 }
 
 header{
@@ -20,7 +23,7 @@ header{
     justify-content: space-between;
     background: #982AE2;
     border-radius: 20px;
-    border-style: groove;
+    border: 10px groove violet;
 }
 
 .left, .right{
@@ -51,11 +54,13 @@ header{
 .home{
     display: flex;
     align-items: center;
+    
 }
 
 .home a{
     text-decoration: none;
     background-color:aliceblue;
+    border: 10px groove violet;
     border-radius: 10px;
     padding: 10px;
 }
@@ -75,6 +80,7 @@ section{
     border-radius: 10px;
     font-size:large;
     margin: 1%;
+    border: 10px groove violet;
 }
 
 #about p{
