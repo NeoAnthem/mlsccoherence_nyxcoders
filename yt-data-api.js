@@ -15,10 +15,11 @@ function channel() {
             var channel = data.items[0];
 
             document.querySelector('#channelName').innerHTML = channel.snippet.title;
-            if (channel.statistics.subscriberCount >= 10000000) {
+            var subscriberCount = channel.statistics.subscriberCount
+            if (subscriberCount >= 10000000) {
                 subscriberCount = parseInt(channel.statistics.subscriberCount / 10000000) + "M"
             }
-            else if (channel.statistics.viewCount >= 1000) {
+            else if (subscriberCount >= 1000) {
                 subscriberCount = parseInt(channel.statistics.subscriberCount / 1000) + "K"
             }
             document.querySelector('#channelSubscribers').innerHTML = subscriberCount;

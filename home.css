@@ -10,6 +10,8 @@
 
 body{
     background: rgb(220, 229, 253);
+    margin: 0;
+    padding: 0;
 }
 
 .contain{
@@ -24,7 +26,7 @@ header{
     background: #982AE2;
     border-radius: 20px;
     border: 10px groove violet;
-    width: 99%;
+    width: 100%;
 }
 
 .left, .right{
