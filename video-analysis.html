@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Channel Statistics</title>
+  <script src="https://apis.google.com/js/api.js"></script> </head>
+<body>
+  <h1>Channel Statistics</h1>
+  <div id="results"></div> <script>
+    // Replace with your YouTube API key
+    const apiKey = 'AIzaSyCMVSPawU1E3rFphQ-c0HRnRJXwBByg5sg';
+
+    // Function to get video IDs from a channel's uploads playlist
+    function getUploadsPlaylistId(channelId) {
+      return new Promise((resolve, reject) => {
+        const url = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${apiKey}`;
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            const uploadsId = data.items[0].contentDetails.relatedPlaylists.uploads;
+            resolve(uploadsId);
+          })
+          .catch(error => reject(error));
+      });
+    }
+
+    // Function to get video details (likes, views, comments) for a video ID
+    function getVideoDetails(videoId) {
+      return new Promise((resolve, reject) => {
+        const url = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&id=${videoId}&key=${apiKey}`;
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            const video = data.items[0];
+            const title = video.snippet.title;
+            const views = video.statistics.viewCount;
+            const likes = video.statistics.likeCount;
+            const comments = video.statistics.commentCount;
+            resolve({ title, views, likes, comments });
+          })
+          .catch(error => reject(error));
+      });
+    }
+
+    // Function to retrieve and display video statistics
+    function getChannelStatistics(channelId) {
+      getUploadsPlaylistId(channelId)
+        .then(playlistId => {
+          const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${apiKey}`;
+          fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              const videos = data.items.map(item => item.snippet.resourceId.videoId);
+              const promises = videos.map(videoId => getVideoDetails(videoId));
+              Promise.all(promises)  // Wait for all video details to be retrieved
+                .then(videoData => {
+                  const resultsContainer = document.getElementById('results');
+                  videoData.forEach(video => {
+                    const result = document.createElement('p');
+                    result.textContent = `${video.title} - Views: ${video.views}, Likes: ${video.likes}, Comments: ${video.comments}`;
+                    resultsContainer.appendChild(result);
+                  });
+                })
+                .catch(error => console.error(error));
+            })
+            .catch(error => console.error(error));
+        })
+        .catch(error => console.error(error));
+    }
+
+    // Replace with the channel ID you want to analyze
+    const channelId = 'UCBRxonhRxsiiFterjV9Z0rg'; // Example channel ID
+    getChannelStatistics(channelId);
+  </script>
+</body>
+</html>
