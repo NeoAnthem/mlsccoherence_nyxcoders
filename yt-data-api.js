@@ -1,4 +1,4 @@
-var apiKey = 'AIzaSyCMVSPawU1E3rFphQ-c0HRnRJXwBByg5sg'; // YouTube Data API V3 Key
+var apiKey = ''; // YouTube Data API V3 Key
 
 function channel() {
     channelID = document.querySelector("#channelID").value;
